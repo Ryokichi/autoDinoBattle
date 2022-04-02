@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/marasuchus.png-89c50cd32d05c2df6c8d540468c67c15.stex"
+path="res://.import/marasuchus.png-d8fc7230d37924b001e138fa275a1410.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Dinossauros/marasuchus.png"
-dest_files=[ "res://.import/marasuchus.png-89c50cd32d05c2df6c8d540468c67c15.stex" ]
+source_file="res://sprites/Dinossauros/marasuchus.png"
+dest_files=[ "res://.import/marasuchus.png-d8fc7230d37924b001e138fa275a1410.stex" ]
 
 [params]
 

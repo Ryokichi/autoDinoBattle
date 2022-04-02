@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dino_2.png-a02517739e47668b3a3cac319352545e.stex"
+path="res://.import/dino_2.png-c14ab0dd36bfa13bec245ceebc0aea4f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Dinossauros/dino_2.png"
-dest_files=[ "res://.import/dino_2.png-a02517739e47668b3a3cac319352545e.stex" ]
+source_file="res://sprites/Dinossauros/dino_2.png"
+dest_files=[ "res://.import/dino_2.png-c14ab0dd36bfa13bec245ceebc0aea4f.stex" ]
 
 [params]
 

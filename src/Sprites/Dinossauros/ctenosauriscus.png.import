@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ctenosauriscus.png-0abbe4d04d6355a8208617d571ea2ffd.stex"
+path="res://.import/ctenosauriscus.png-b46735a9f07bbca679bf3e3fdd3ba22b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Dinossauros/ctenosauriscus.png"
-dest_files=[ "res://.import/ctenosauriscus.png-0abbe4d04d6355a8208617d571ea2ffd.stex" ]
+source_file="res://sprites/Dinossauros/ctenosauriscus.png"
+dest_files=[ "res://.import/ctenosauriscus.png-b46735a9f07bbca679bf3e3fdd3ba22b.stex" ]
 
 [params]
 

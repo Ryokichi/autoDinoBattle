@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/t-rex.png-b0bef121dbf49a101ef064fcedd094d1.stex"
+path="res://.import/t-rex.png-a6658ad1c0af8add0bc8fc178af76aa1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Dinossauros/t-rex.png"
-dest_files=[ "res://.import/t-rex.png-b0bef121dbf49a101ef064fcedd094d1.stex" ]
+source_file="res://sprites/Dinossauros/t-rex.png"
+dest_files=[ "res://.import/t-rex.png-a6658ad1c0af8add0bc8fc178af76aa1.stex" ]
 
 [params]
 

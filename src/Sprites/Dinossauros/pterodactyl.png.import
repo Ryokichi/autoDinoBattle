@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pterodactyl.png-b7ffb345c608fc90f7ea15a631230237.stex"
+path="res://.import/pterodactyl.png-8f36ea9ee72a8cf7edfcb9ce55624872.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Dinossauros/pterodactyl.png"
-dest_files=[ "res://.import/pterodactyl.png-b7ffb345c608fc90f7ea15a631230237.stex" ]
+source_file="res://sprites/Dinossauros/pterodactyl.png"
+dest_files=[ "res://.import/pterodactyl.png-8f36ea9ee72a8cf7edfcb9ce55624872.stex" ]
 
 [params]
 

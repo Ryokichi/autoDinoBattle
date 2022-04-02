@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/archaeopteryx.png-132ca856d8250debded4fd9296d363ef.stex"
+path="res://.import/archaeopteryx.png-8a4f74074c10a2f77a89de3dc7db1f41.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Dinossauros/archaeopteryx.png"
-dest_files=[ "res://.import/archaeopteryx.png-132ca856d8250debded4fd9296d363ef.stex" ]
+source_file="res://sprites/Dinossauros/archaeopteryx.png"
+dest_files=[ "res://.import/archaeopteryx.png-8a4f74074c10a2f77a89de3dc7db1f41.stex" ]
 
 [params]
 

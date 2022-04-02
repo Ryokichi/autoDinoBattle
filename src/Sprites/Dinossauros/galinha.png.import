@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/galinha.png-bff8c411ac5cf598887854c3cf49b9e3.stex"
+path="res://.import/galinha.png-70b6dfd69c798c44e01f4d8a4ac56dea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Dinossauros/galinha.png"
-dest_files=[ "res://.import/galinha.png-bff8c411ac5cf598887854c3cf49b9e3.stex" ]
+source_file="res://sprites/Dinossauros/galinha.png"
+dest_files=[ "res://.import/galinha.png-70b6dfd69c798c44e01f4d8a4ac56dea.stex" ]
 
 [params]
 

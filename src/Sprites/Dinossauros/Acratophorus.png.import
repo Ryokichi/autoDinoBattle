@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Acratophorus.png-9157226ff75d6dfe5999c81370626edf.stex"
+path="res://.import/Acratophorus.png-977536f29e4d76eed776091a2aaca0d6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Dinossauros/Acratophorus.png"
-dest_files=[ "res://.import/Acratophorus.png-9157226ff75d6dfe5999c81370626edf.stex" ]
+source_file="res://sprites/Dinossauros/Acratophorus.png"
+dest_files=[ "res://.import/Acratophorus.png-977536f29e4d76eed776091a2aaca0d6.stex" ]
 
 [params]
 
