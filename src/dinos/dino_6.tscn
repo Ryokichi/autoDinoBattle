@@ -1,12 +1,15 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://dinos/_master.tscn" type="PackedScene" id=1]
-[ext_resource path="res://sprites/Dinossauros/pterodactyl.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Dinossauros/dino_6.png" type="Texture" id=2]
 [ext_resource path="res://dinos/dino_6.gd" type="Script" id=3]
 
 [node name="Dino" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 
-[node name="Image" parent="." index="0"]
-position = Vector2( 0, -91 )
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 10, -72 )
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2( 14, -73 )
 texture = ExtResource( 2 )

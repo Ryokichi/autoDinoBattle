@@ -1,16 +1,15 @@
 extends "res://dinos/_master.gd"
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$Sprite.position = Vector2(0, -84)
+	$Area2D/CollisionShape2D.position = Vector2(0, -84)
+	$Area2D/CollisionShape2D.shape.extents = Vector2(74, 92)
+	pass
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func set_my_name():
+	my_name = 'dino_1'
+	print (my_name)
+
+
