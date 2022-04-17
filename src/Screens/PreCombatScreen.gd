@@ -8,9 +8,9 @@ var dinosInBattle  = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	db = GlobalVar.db
-	GlobalVar.addTurn()
-	$Background/turn.text = str(GlobalVar.gameTurn)
+	db = GlobalParams.db
+	GlobalParams.addTurn()
+	$Background/turn.text = str(GlobalParams.gameTurn)
 	pass
 
 

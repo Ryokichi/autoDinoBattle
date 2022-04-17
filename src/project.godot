@@ -10,13 +10,14 @@ config_version=4
 
 [application]
 
-config/name="Auto Dinos"
+config/name="AutoDinoBattle"
 run/main_scene="res://screens/InitialScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-GlobalVar="*res://GlobalVar.gd"
+GlobalParams="*res://GlobalParams.gd"
+GlobalSignals="*res://GlobalSignals.gd"
 
 [display]
 

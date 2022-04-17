@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://sprites/background1.png" type="Texture" id=1]
 [ext_resource path="res://sprites/base.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://sprites/btn_pressed.png" type="Texture" id=5]
 [ext_resource path="res://fonts/tt0524m_.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://screens/PreCombatScreen.gd" type="Script" id=7]
+[ext_resource path="res://scenario_obj/slot_base.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=4]
 size = 40
@@ -85,21 +86,17 @@ text = "asdfasd"
 align = 1
 valign = 1
 
-[node name="slot_market_03" type="Sprite" parent="."]
+[node name="slot_market_03" parent="." instance=ExtResource( 8 )]
 position = Vector2( 720, 854 )
-texture = ExtResource( 2 )
 
-[node name="slot_market_02" type="Sprite" parent="."]
+[node name="slot_market_02" parent="." instance=ExtResource( 8 )]
 position = Vector2( 880, 854 )
-texture = ExtResource( 2 )
 
-[node name="slot_market_01" type="Sprite" parent="."]
+[node name="slot_market_01" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1040, 854 )
-texture = ExtResource( 2 )
 
-[node name="slot_market_00" type="Sprite" parent="."]
+[node name="slot_market_00" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1200, 854 )
-texture = ExtResource( 2 )
 
 [node name="slot_battle_05" type="Sprite" parent="."]
 position = Vector2( 640, 594 )
