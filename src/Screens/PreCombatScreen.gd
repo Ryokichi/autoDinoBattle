@@ -16,7 +16,7 @@ func _ready():
 
 func _on_btn_roll_pressed():
 	for dino in dinosInMarket:
-		print (dino.queue_free())
+		print ("_on_btn_roll_pressed: ", dino.queue_free())
 		pass
 	dinosInMarket.clear()
 	
@@ -44,16 +44,10 @@ func addDinosToMarket(list):
 	var dinos = [] + list
 	dinos.shuffle()
 	
-	print("res://dinos/"+dinos[0].name+".tscn")
-	print("res://dinos/"+dinos[1].name+".tscn")
-	print("res://dinos/"+dinos[2].name+".tscn")
-	print("res://dinos/"+dinos[3].name+".tscn")
-	
-	
-	dinosInMarket.append(load("res://dinos/"+dinos[0].name+".tscn").instance())
-	dinosInMarket.append(load("res://dinos/"+dinos[1].name+".tscn").instance())
-	dinosInMarket.append(load("res://dinos/"+dinos[2].name+".tscn").instance())
-	dinosInMarket.append(load("res://dinos/"+dinos[3].name+".tscn").instance())
+	for i in range(0, 4):
+		print(str(i) + " addDinosToMarket: res://dinos/"+dinos[i].name+".tscn")
+		dinosInMarket.append(load("res://dinos/"+dinos[i].name+".tscn").instance())
+		pass
 	
 	for dino in dinosInMarket:
 		add_child(dino)

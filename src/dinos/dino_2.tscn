@@ -7,9 +7,6 @@
 [node name="Dino" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 
-[node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2( 0, -57 )
-
 [node name="Sprite" parent="." index="1"]
-position = Vector2( 0, -57 )
+position = Vector2( 0, -88 )
 texture = ExtResource( 2 )

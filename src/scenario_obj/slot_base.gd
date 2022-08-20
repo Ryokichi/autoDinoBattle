@@ -4,7 +4,7 @@ var child_dino = null
 
 
 func _ready():
-	$Selection.visible = true
+	$SelectionSprite.visible = true
 	pass
 
 func set_child_dino(dino):
