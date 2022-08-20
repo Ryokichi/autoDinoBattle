@@ -7,6 +7,6 @@
 [node name="Dino" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 
-[node name="Image" parent="." index="0"]
-position = Vector2( 0, -77 )
+[node name="Sprite" parent="." index="1"]
+position = Vector2( 0, -88 )
 texture = ExtResource( 2 )
