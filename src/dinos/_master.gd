@@ -3,6 +3,7 @@ extends Node2D
 var is_selected = false
 var sprite_tex
 var my_name = 't-rex'
+var aux_sprite = null
 
 
 func _ready():
@@ -13,8 +14,7 @@ func _ready():
 func _input(event):
 	if(event is InputEventMouseButton):
 		if (event.button_index == BUTTON_LEFT and  !event.pressed):
-			is_selected = false
-			$AtqLife.visible = true
+			set_Initial_Param()
 			pass
 		
 	pass
@@ -27,13 +27,21 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		pass
 	pass
 
-
 func _physics_process(delta):
 	pass
 
-
+func set_Initial_Param():
+	is_selected = false
+	$AtqLife.visible = true
+	aux_sprite.position = $Sprite.position
+	pass
 func set_AtqLife_visibility(visibility):
-	$AtqLife.visible = visibility
+	if (visibility):
+		$Sprite.modulate = Color(1,1,1)
+#		$AtqLife.visible = visibility
+	else:
+		$Sprite.modulate = Color(0,0,0)
+		pass
 	pass
 
 
@@ -45,11 +53,13 @@ func set_my_name():
 func set_sprite_texture():
 	var sprite_path = "res://sprites/Dinossauros/"+my_name+".png"
 	$Sprite.texture = load(sprite_path)
+	aux_sprite = $Sprite.duplicate(1)
+	add_child(aux_sprite)
 	pass
 
 
 func update_position(delta):
-	global_position = lerp(global_position, get_global_mouse_position(), 25*delta)
+	aux_sprite.global_position = lerp(aux_sprite.global_position, get_global_mouse_position(), 25*delta)
 	pass
 
 
