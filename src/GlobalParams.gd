@@ -6,6 +6,7 @@ const db_path = "res://dataStore/dinoBattleDB.db"
 var db = null
 var gameTurn = 0
 var dino_selected = null
+var slot_selected = null
 
 
 func _ready():
@@ -14,6 +15,21 @@ func _ready():
 	gameTurn = 0
 	pass
 
+
+func connect_signals():
+	GlobalSignals.connect('dino_selected', self, 'set_dino_select')
+	GlobalSignals.connect('dino_released', self, 'set_dino_released')
+	GlobalSignals.connect('is_over_slot', self, 'set_slot_selected')
+	pass
+
+func is_dino_selected():
+	return (dino_selected != null)
+	pass
+
+
+func get_dino_selected():
+	return dino_selected
+	pass
 
 func _input(event):
 	if(event is InputEventMouseButton):
@@ -33,8 +49,7 @@ func _physics_process(delta):
 
 func check_for_dino_selected():
 	if (dino_selected != null):
-		dino_selected.set_AtqLife_visibility(true)
-		dino_selected = null
+		set_dino_released()
 		pass
 	pass
 
@@ -43,11 +58,6 @@ func load_data_base():
 	db = SQLite.new()
 	db.path = db_path
 	db.open_db()
-	pass
-
-
-func connect_signals():
-	GlobalSignals.connect('dino_selected', self, 'set_dino_select')
 	pass
 
 
@@ -62,4 +72,10 @@ func getCurrentTurn():
 
 func set_dino_select(dino):
 	dino_selected = dino
+	pass
+
+
+func set_dino_released():
+	dino_selected = null
+	print ('soltei')
 	pass

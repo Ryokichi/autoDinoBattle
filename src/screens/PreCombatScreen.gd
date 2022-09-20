@@ -10,7 +10,7 @@ var dinosInBattle  = []
 func _ready():
 	db = GlobalParams.db
 	GlobalParams.addTurn()
-	$Background/turn.text = str(GlobalParams.gameTurn)
+	$Background/turn.text = "Turno:" + str(GlobalParams.gameTurn)
 	pass
 
 
