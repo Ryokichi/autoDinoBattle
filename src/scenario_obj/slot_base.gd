@@ -2,6 +2,7 @@ extends Area2D
 
 var child_dino = null
 var is_over_me = false
+export(String, 'market', 'battle', 'reserve') var slot_type
 
 
 func _ready():
@@ -23,6 +24,7 @@ func _on_Slot_mouse_entered():
 		$SelectionSprite.visible = true
 		self.is_over_me = true
 		print(self.global_position)
+		
 		pass
 	pass
 

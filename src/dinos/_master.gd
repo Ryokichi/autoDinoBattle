@@ -4,7 +4,7 @@ var is_selected = false
 var sprite_tex
 var my_name = 't-rex'
 var aux_sprite = null
-
+var slot
 
 func _ready():
 	set_my_name()

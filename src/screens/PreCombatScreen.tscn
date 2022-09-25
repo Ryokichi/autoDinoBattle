@@ -87,39 +87,51 @@ valign = 1
 
 [node name="slot_reserve_02" parent="." instance=ExtResource( 8 )]
 position = Vector2( 800, 340 )
+slot_type = "reserve"
 
 [node name="slot_reserve_01" parent="." instance=ExtResource( 8 )]
 position = Vector2( 960, 340 )
+slot_type = "reserve"
 
 [node name="slot_reserve_00" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1120, 340 )
+slot_type = "reserve"
 
 [node name="slot_market_03" parent="." instance=ExtResource( 8 )]
 position = Vector2( 720, 854 )
+slot_type = "market"
 
 [node name="slot_battle_04" parent="." instance=ExtResource( 8 )]
 position = Vector2( 640, 600 )
+slot_type = "battle"
 
 [node name="slot_battle_03" parent="." instance=ExtResource( 8 )]
 position = Vector2( 800, 600 )
+slot_type = "battle"
 
 [node name="slot_battle_02" parent="." instance=ExtResource( 8 )]
 position = Vector2( 960, 600 )
+slot_type = "battle"
 
 [node name="slot_battle_01" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1120, 600 )
+slot_type = "battle"
 
 [node name="slot_battle_00" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1280, 600 )
+slot_type = "battle"
 
 [node name="slot_market_00" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1200, 854 )
+slot_type = "market"
 
 [node name="slot_market_01" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1040, 854 )
+slot_type = "market"
 
 [node name="slot_market_02" parent="." instance=ExtResource( 8 )]
 position = Vector2( 880, 854 )
+slot_type = "market"
 
 [node name="btn_roll" type="TextureButton" parent="."]
 margin_left = 466.0

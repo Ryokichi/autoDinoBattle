@@ -8,6 +8,8 @@ var gameTurn = 0
 var dino_selected = null
 var slot_selected = null
 
+var current_scene = null
+
 
 func _ready():
 	load_data_base()
@@ -76,6 +78,11 @@ func set_dino_select(dino):
 
 
 func set_dino_released():
+	self.current_scene.onMouseUp(dino_selected)
 	dino_selected = null
 	print ('soltei')
+	pass
+
+func setCurrentScene(scene):
+	self.current_scene = scene
 	pass
