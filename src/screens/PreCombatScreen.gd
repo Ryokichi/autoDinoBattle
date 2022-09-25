@@ -143,16 +143,13 @@ func onDinoFuseOrChangePosition(dino):
 	if foundSlot.get_child_dino() == null:
 		var oldSlot = dino.slot
 		oldSlot.set_child_dino(null)
-		dino.slot = foundSlot
 		foundSlot.set_child_dino(dino)
 		dino.set_global_position(foundSlot.get_global_position())
 		pass
 	else:
 		var otherDino = foundSlot.get_child_dino();
 		var oldSlot = dino.slot
-		otherDino.slot = oldSlot
 		oldSlot.set_child_dino(otherDino)
-		dino.slot = foundSlot
 		foundSlot.set_child_dino(dino)
 		otherDino.set_global_position(oldSlot.get_global_position())
 		dino.set_global_position(foundSlot.get_global_position())
@@ -169,7 +166,6 @@ func onDinoBought(dino):
 	var oldSlot = dino.slot
 	if self.canBeBought():
 		oldSlot.set_child_dino(null)
-		dino.slot = foundSlot
 		foundSlot.set_child_dino(dino)
 		dino.set_global_position(foundSlot.get_global_position())
 	

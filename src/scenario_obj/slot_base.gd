@@ -11,6 +11,8 @@ func _ready():
 
 func set_child_dino(dino):
 	child_dino = dino
+	if dino != null:
+		dino.slot = self
 	pass
 
 
