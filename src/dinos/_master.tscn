@@ -55,7 +55,7 @@ text = "0"
 align = 1
 valign = 1
 
-[node name="Label" type="Label" parent="AtqLife"]
+[node name="LifeValue" type="Label" parent="AtqLife"]
 margin_top = -24.0
 margin_right = 54.0
 margin_bottom = 24.0

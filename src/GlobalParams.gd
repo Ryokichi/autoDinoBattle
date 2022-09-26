@@ -74,11 +74,13 @@ func getCurrentTurn():
 
 func set_dino_select(dino):
 	dino_selected = dino
+	dino.set_z_index(10)
 	pass
 
 
 func set_dino_released():
 	self.current_scene.onMouseUp(dino_selected)
+	dino_selected.set_z_index(0)
 	dino_selected = null
 	print ('soltei')
 	pass

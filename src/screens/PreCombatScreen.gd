@@ -34,12 +34,12 @@ func onTurnStart():
 	pass
 
 func _on_btn_roll_pressed():
-	for dino in dinosInMarket:
-		print ("_on_btn_roll_pressed: ", dino.queue_free())
+	for slot in self.slots[0]:
+		var child = slot.get_child_dino()
+		if child != null:
+			print ("_on_btn_roll_pressed: ", child.queue_free())
 		pass
-	
-	dinosInMarket.clear()
-	
+		
 	for n in range(0, numOfDinosInMarket):
 		randomize()
 		var rand = stepify(rand_range(0, 100), 1) #Aqui ele só faz um random de 0 a 99(incluso) e força o valor a base inteira(remove qqr coisa pos 1.xxx)
@@ -116,9 +116,7 @@ func addDinoToMarket(dinoInfo):
 	var dino = load("res://dinos/"+dinoInfo.name+".tscn").instance()
 	#
 	#dino.hp = dinoInfo.hp #adicionar aqui tudo que seria pra instanciar os stats dos dinos
-	#
-	dinosInMarket.append(dino)
-	
+	#	
 	add_child(dino)
 	return dino
 	pass
@@ -135,36 +133,65 @@ func onMouseUp(dino):
 		self.onDinoFuseOrChangePosition(dino);
 	pass
 
+func changeDinoPosition(dino, foundSlot):
+	var oldSlot = dino.slot
+	oldSlot.set_child_dino(null)
+	foundSlot.set_child_dino(dino)
+	dino.set_global_position(foundSlot.get_global_position())
+	pass
+
+func exchangeDinosPosition(dino1, dino2, foundSlot):
+	var oldSlot = dino1.slot
+	oldSlot.set_child_dino(dino2)
+	foundSlot.set_child_dino(dino1)
+	dino2.set_global_position(oldSlot.get_global_position())
+	dino1.set_global_position(foundSlot.get_global_position())
+	pass
+
+func consumeDraggedDino(dinoDragged, dinoInSlot):
+	if dinoDragged == dinoInSlot:
+		return
+	dinoInSlot.consume(dinoDragged)
+	self.interactWithTeam('dinoConsumed', dinoDragged)
+	dinoDragged.slot.set_child_dino(null)
+	dinoDragged.getConsumed()
+	dinoDragged.queue_free()
+	pass
+
 func onDinoFuseOrChangePosition(dino):
 	var foundSlot = self.findActivatedSlot()
 	if foundSlot == null:
 		return
 	
 	if foundSlot.get_child_dino() == null:
-		var oldSlot = dino.slot
-		oldSlot.set_child_dino(null)
-		foundSlot.set_child_dino(dino)
-		dino.set_global_position(foundSlot.get_global_position())
+		self.changeDinoPosition(dino, foundSlot)
 		pass
 	else:
 		var otherDino = foundSlot.get_child_dino();
-		var oldSlot = dino.slot
-		oldSlot.set_child_dino(otherDino)
-		foundSlot.set_child_dino(dino)
-		otherDino.set_global_position(oldSlot.get_global_position())
-		dino.set_global_position(foundSlot.get_global_position())
+		if(dino.my_name == otherDino.my_name):
+			self.consumeDraggedDino(dino, otherDino)
+			pass
+		else:
+			self.exchangeDinosPosition(dino, otherDino, foundSlot)
+			pass
 		pass
 	pass
 
 func onDinoBought(dino):
 	var foundSlot = self.findActivatedSlot()
 	
-	if foundSlot == null || foundSlot.get_child_dino() != null:
+	if foundSlot == null:
 		return
 	
 	#Realizar a compra
 	var oldSlot = dino.slot
 	if self.canBeBought():
+		var otherDino = foundSlot.get_child_dino()
+		if(otherDino != null && dino.my_name == otherDino.my_name):
+			self.consumeDraggedDino(dino, otherDino)
+			return
+		if foundSlot.get_child_dino() != null:
+			return
 		oldSlot.set_child_dino(null)
 		foundSlot.set_child_dino(dino)
 		dino.set_global_position(foundSlot.get_global_position())
